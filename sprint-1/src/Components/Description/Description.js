@@ -18,9 +18,9 @@ class Description extends React.Component {
                     <p className="description__container1__date">{timestamp}</p>
                 </div>
                 <div className="description__container2">
-                    <img className="description__container2__views-img" src={ViewsImg}></img>
+                    <img className="description__container2__views-img" src={ViewsImg} alt=""></img>
                     <p className="description__container2__views">{views}</p>
-                    <img className="description__container2__likes-img" src={LikesImg}></img>
+                    <img className="description__container2__likes-img" src={LikesImg} alt=""></img>
                     <p className="description__container2__likes">{likes}</p>
                 </div>
                 <p className="description__info">{description}</p>

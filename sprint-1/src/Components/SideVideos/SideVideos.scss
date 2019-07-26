@@ -1,0 +1,42 @@
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+@import "../../Styles/fonts.scss";
+
+.side-videos {
+    padding: 0 16px;
+
+    &__title{
+        @include h5-desk-font;
+        color: $Silver;
+        font-family: 'AvenirDemiBold';
+        margin: 40px 0;
+    }
+
+    &__video-container {
+        display: flex;
+        margin-bottom: 24px;
+
+        &__video {  
+            width: 120px;
+            height:70px;
+            object-fit: cover;
+        }
+
+        &__info-div {
+            width: 50%;
+            margin-left: 10px;
+        }
+    }
+}
+
+.video-container__info-div__title {
+    @include h4-mobile-font;
+    font-family: 'AvenirDemiBold';
+    margin: 0;
+
+}
+
+.video-container__info-div__channel {
+    @include h4-mobile-font;
+    margin: 5px 0 0 0;
+}

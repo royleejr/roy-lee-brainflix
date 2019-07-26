@@ -1,0 +1,64 @@
+@import "../../Styles/fonts.scss";
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+.input {
+    display:flex;
+    flex-direction: column;
+    padding: 0 16px;
+
+
+    &__counter {
+        @include h4-mobile-font;
+        font-family: 'AvenirDemiBold';
+    }
+
+    &__title {
+        @include h5-mobile-font;
+        color: $Silver;
+        margin: 0 0 0 62px;
+        font-family: 'AvenirDemiBold';
+    }
+
+    &__section {
+        display:flex;
+        border-bottom: 1px solid $mercury;
+
+        &__image {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        &__form {
+            display:flex;
+            flex-direction: column;
+            width: 80%;
+        }
+    }
+}
+
+.section__form__comment-box {
+    height: 60px;
+    padding: 15px;
+    font-family: 'AvenirRegular';
+    border: 2px solid $brainflix-blue;
+    border-radius: 4px;
+    margin: 0 0 16px 0;
+
+    &::placeholder {
+        color: $background-black;
+        @include h5-mobile-font;
+    }
+}
+
+.section__form__button {
+    height: 45px;
+    border-radius: 5px;
+    background-color: $brainflix-blue;
+    color:$text-white;
+    border: 1px solid $brainflix-blue;
+    font-family: 'AvenirRegular';
+    margin: 0 0 24px 0;
+}
