@@ -8,7 +8,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className="header">
-                <img className="header__img" src={Logo}></img>
+                <img className="header__logo" src={Logo}></img>
                 <input className="header__input" placeholder="Search"></input>
                 <div className="header__container">
                     <button className="header__container__button">UPLOAD</button>

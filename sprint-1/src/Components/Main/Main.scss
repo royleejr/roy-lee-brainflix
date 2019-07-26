@@ -1,3 +1,9 @@
 @import "../../Styles/mixins.scss";
 @import "../../Styles/variables.scss";
 @import "../../Styles/fonts.scss";
+
+body {
+    color: $background-black;
+    font-family: 'AvenirRegular';
+
+}

@@ -1,0 +1,65 @@
+@import "../../Styles/fonts.scss";
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+.description {
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 0 16px;
+
+    &__title {
+
+        @include h1-mobile-font;
+        font-family: 'AvenirBold';
+        margin: 32px 0 16px 0;
+    }
+
+    &__container1 {
+        display:flex;
+        margin-bottom: 32px;
+
+        &__channel {
+            @include h2-mobile-font;
+            font-family: 'AvenirDemiBold';
+            margin:0 8px 0 0;
+
+        }
+
+        &__date{
+            margin: 0;
+            @include h5-mobile-font;
+            color: $Silver;
+        }
+    }
+
+    &__container2 {
+        display:flex;
+        padding-bottom:24px;
+        border-bottom: 1px solid $mercury;
+
+        &__views-img {
+            height: 15px;
+            margin-right: 8px;
+        }
+
+        &__views {
+            @include h4-mobile-font;
+            margin: 0;
+        }
+
+        &__likes-img {
+            height: 15px;
+            margin:0 8px 0 24px;
+        }
+
+        &__likes {
+            @include h4-mobile-font;
+            margin:0;
+        }
+    }
+
+    &__info {
+        @include h5-mobile-font;
+    }
+}

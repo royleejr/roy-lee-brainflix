@@ -8,7 +8,7 @@
     padding: 0 16px;
     margin-bottom: 16px;
 
-    &__img {
+    &__logo {
         height: 48px;
         width: 50%;
         align-self: center;
@@ -19,33 +19,39 @@
         background-repeat: no-repeat;
         background-size: 20px 20px;
         background-position-y: center;
-        background-position-x: 5%;
+        background-position-x: 15px;
         padding-left: 40px;
         height: 40px;
         border-radius: 5px;
-        border: solid 1px;
+        border: solid 1px $mercury;
+        background-color: $alabaster;
     }
 
     &__container {
         margin: 8px 0 0 0;
-        height: 40px;
+        height: 48px;
         display:flex;
 
         &__button {
-            
+            background-image: url("../../assets/Icons/SVG/Icon-upload.svg");
+            background-repeat: no-repeat;
+            background-size: 15px 15px;
+            background-position-y: center;
+            background-position-x: 25%;
             height: 100%;
             background-color: $brainflix-blue;
             border: 0;
             border-radius: 5px;
             color: $text-white;
-            width: 70%;
+            width: 80%;
         }
     
         &__photo {
-            width: 50px;
+            width: 48px;
             border-radius: 50%;
             height: 100%;
             margin-left: 16px;
+
         }
     }
     
