@@ -7,7 +7,7 @@ class SideVideos extends React.Component {
         let newSideVideoData = this.props.sideVideoData.filter(item => item.id !== this.props.mainVideoData.id);
 
         return(
-            <section className="side-videos">
+            <aside className="side-videos">
                 <p className="side-videos__title">NEXT VIDEO</p>
                 {
                     newSideVideoData.map ( (item, i) => {
@@ -22,7 +22,7 @@ class SideVideos extends React.Component {
                     )
                 })
             }
-            </section>
+            </aside>
         )
     }
 }

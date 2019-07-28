@@ -7,10 +7,17 @@
     flex-direction: column;
     padding: 0 16px;
 
+    @include tablet {
+        padding: 0 24px;
+    }
 
     &__counter {
         @include h4-mobile-font;
         font-family: 'AvenirDemiBold';
+
+        @include tablet {
+            @include h4-desk-font;
+        }
     }
 
     &__title {
@@ -18,6 +25,10 @@
         color: $Silver;
         margin: 0 0 0 62px;
         font-family: 'AvenirDemiBold';
+
+        @include tablet {
+            @include h5-desk-font;
+        }
     }
 
     &__section {
@@ -35,6 +46,10 @@
             display:flex;
             flex-direction: column;
             width: 80%;
+
+            @include tablet {
+                flex-direction: row;
+            }
         }
     }
 }
@@ -43,9 +58,19 @@
     height: 60px;
     padding: 15px;
     font-family: 'AvenirRegular';
-    border: 2px solid $brainflix-blue;
+    border: 2px solid $Silver;
     border-radius: 4px;
     margin: 0 0 16px 0;
+
+
+    @include tablet {
+        width: 70%;
+        height: 12px;
+    }
+
+    &:active {
+        border-color: $brainflix-blue;
+    }
 
     &::placeholder {
         color: $background-black;
@@ -61,4 +86,9 @@
     border: 1px solid $brainflix-blue;
     font-family: 'AvenirRegular';
     margin: 0 0 24px 0;
+
+    @include tablet {
+        width: 30%;
+        margin-left: 16px;
+    }
 }

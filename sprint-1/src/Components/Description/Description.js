@@ -13,15 +13,17 @@ class Description extends React.Component {
         return (
             <section className="description">
                 <p className="description__title">{title}</p>
-                <div className="description__container1">
-                    <p className="description__container1__channel">By {channel}</p>
-                    <p className="description__container1__date">{timestamp}</p>
-                </div>
-                <div className="description__container2">
-                    <img className="description__container2__views-img" src={ViewsImg} alt=""></img>
-                    <p className="description__container2__views">{views}</p>
-                    <img className="description__container2__likes-img" src={LikesImg} alt=""></img>
-                    <p className="description__container2__likes">{likes}</p>
+                <div className="description__container-flex">
+                    <div className="description__container1">
+                        <p className="description__container1__channel">By {channel}</p>
+                        <p className="description__container1__date">{timestamp}</p>
+                    </div>
+                    <div className="description__container2">
+                        <img className="description__container2__views-img" src={ViewsImg} alt=""></img>
+                        <p className="description__container2__views">{views}</p>
+                        <img className="description__container2__likes-img" src={LikesImg} alt=""></img>
+                        <p className="description__container2__likes">{likes}</p>
+                    </div>
                 </div>
                 <p className="description__info">{description}</p>
             </section>

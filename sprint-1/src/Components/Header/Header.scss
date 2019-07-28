@@ -8,10 +8,34 @@
     padding: 0 16px;
     margin-bottom: 16px;
 
+    @include tablet {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px;
+        height: 80px;
+        margin: 0;
+    }
+
+    @include desk {
+        padding: 0 180px;
+    }
+
     &__logo {
         height: 48px;
         width: 50%;
         align-self: center;
+
+        @include tablet {
+            height: 25px;
+            width: 20%;
+            margin-right: 150px;
+        }
+
+        @include desk {
+            height: 30px;
+            margin-right: 250px;
+        }
     }
 
     &__input {
@@ -25,12 +49,31 @@
         border-radius: 5px;
         border: solid 1px $mercury;
         background-color: $alabaster;
+
+        &:active {
+            border-color: $brainflix-blue;
+        }
+
+        @include tablet {
+            width: 150px;
+        }
+
+        @include tablet {
+            width: 250px;
+            height: 45px;
+            
+        }
     }
 
     &__container {
         margin: 8px 0 0 0;
         height: 48px;
         display:flex;
+
+        @include tablet {
+            width: 25%;
+            margin: 0;
+        }
 
         &__button {
             background-image: url("../../assets/Icons/SVG/Icon-upload.svg");
@@ -44,6 +87,20 @@
             border-radius: 5px;
             color: $text-white;
             width: 80%;
+
+            &:hover {
+                background-color: $brainflix-blue-hover;
+            }
+
+            @include tablet {
+                background-position-x: 15px;
+                padding-left: 20px;
+                height: 45px;
+            }
+
+            @include desk {
+                height: 49px;
+            }
         }
     
         &__photo {
@@ -51,7 +108,6 @@
             border-radius: 50%;
             height: 100%;
             margin-left: 16px;
-
         }
     }
     

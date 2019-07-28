@@ -8,21 +8,48 @@
     margin-bottom: 40px;
     padding: 0 16px;
 
+    @include tablet {
+        padding: 0 24px;
+        margin-bottom: 64px;
+    }
+
     &__title {
 
         @include h1-mobile-font;
         font-family: 'AvenirBold';
         margin: 0px 0 16px 0;
+
+        @include tablet {
+            @include h1-desk-font;
+        }
+    }
+
+    &__container-flex{
+        border-bottom: 1px solid $mercury;
+
+        @include tablet {
+            display:flex;
+            justify-content: space-between;
+        }
     }
 
     &__container1 {
         display:flex;
         margin-bottom: 32px;
 
+        @include tablet {
+            flex-direction: row;
+        }
+        
+
         &__channel {
             @include h2-mobile-font;
             font-family: 'AvenirDemiBold';
             margin:0 8px 0 0;
+
+            @include tablet {
+                @include h3-desk-font;
+            }
 
         }
 
@@ -30,13 +57,17 @@
             margin: 0;
             @include h5-mobile-font;
             color: $Silver;
+
+            @include tablet {
+                @include h5-desk-font;
+                align-self: center;
+            }
         }
     }
 
     &__container2 {
         display:flex;
         padding-bottom:24px;
-        border-bottom: 1px solid $mercury;
 
         &__views-img {
             height: 15px;
@@ -61,5 +92,9 @@
 
     &__info {
         @include h5-mobile-font;
+
+        @include tablet {
+            @include h4-desk-font;
+        }
     }
 }

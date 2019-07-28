@@ -5,6 +5,10 @@
 .side-videos {
     padding: 0 16px;
 
+    @include tablet {
+        padding: 0 24px;
+    }
+
     &__title{
         @include h5-desk-font;
         color: $Silver;
@@ -15,6 +19,10 @@
     &__video-container {
         display: flex;
         margin-bottom: 24px;
+
+        @include tablet {
+            width: 46%;
+        }
 
         &__video {  
             width: 120px;
