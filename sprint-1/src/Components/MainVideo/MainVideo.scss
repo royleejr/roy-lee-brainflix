@@ -12,6 +12,10 @@
             display:flex;
             justify-content: center;
         }
+
+        @include desk {
+            padding: 0 248px;
+        }
     }
     &__video {
         width:100%;
@@ -23,6 +27,11 @@
             display: flex;
             background-color:black;
         }
+
+        @include desk {
+            margin: 0;
+            width: 100%;
+        }
     }
     
     &__controls {
@@ -32,6 +41,12 @@
         left: 2px;
         width: 100%;
         justify-content: center;
+
+        @include desk {
+            width: 70%;
+            justify-self: center;
+            left: 210px;
+        }
 
         &__play-button {
             background-color: rgba(0,0,0,0.5);
@@ -70,9 +85,6 @@
 
         }
     }
-}
-
-.controls__button__img {
 }
 
 .controls__duration--bar {

@@ -9,11 +9,21 @@
         padding: 0 24px;
     }
 
+    @include desk {
+        width: 30%;
+        display: inline-block;
+        padding: 0 180px 0 0;
+    }
+
     &__title{
         @include h5-desk-font;
         color: $Silver;
         font-family: 'AvenirDemiBold';
         margin: 40px 0;
+
+        @include desk {
+            margin: 20px 0 40px 0;
+        }
     }
 
     &__video-container {
@@ -22,6 +32,10 @@
 
         @include tablet {
             width: 46%;
+        }
+
+        @include desk {
+            width: 100%;
         }
 
         &__video {  
@@ -42,9 +56,17 @@
     font-family: 'AvenirDemiBold';
     margin: 0;
 
+    @include tablet {
+        @include h4-desk-font;
+    }
+
 }
 
 .video-container__info-div__channel {
     @include h4-mobile-font;
     margin: 5px 0 0 0;
+
+    @include tablet {
+        @include h4-desk-font;
+    }
 }

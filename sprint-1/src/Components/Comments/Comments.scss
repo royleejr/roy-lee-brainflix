@@ -12,6 +12,11 @@
         margin: 0 24px;
     }
 
+    @include desk {
+        margin: 0 0 0 180px;
+        width: 62%;
+    }
+
     &__img {
         height: 40px;
         width: 40px;
@@ -22,6 +27,10 @@
 
     &__container {
         width: 70%;
+
+        @include tablet {
+            width: 85%;
+        }
 
         &__info {
             display:flex;

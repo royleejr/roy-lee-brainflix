@@ -22,14 +22,18 @@ class Main extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="main"> 
                 <Header />
                 <MainVideo mainVideoData={this.state.mainVideoData}/>
-                <Description mainVideoData={this.state.mainVideoData}/>
-                <Input CommentData={this.state.CommentData}/>
-                <Comments CommentData={this.state.CommentData} />
-                <SideVideos sideVideoData={sideVideoData} mainVideoData={mainVideoData}/>
-            </> 
+                <div className="main__layout">
+                    <div className="main__layout__container">
+                        <Description mainVideoData={this.state.mainVideoData}/>
+                        <Input CommentData={this.state.CommentData}/>
+                        <Comments CommentData={this.state.CommentData} />
+                    </div>
+                    <SideVideos sideVideoData={sideVideoData} mainVideoData={mainVideoData}/>
+                </div>
+            </div> 
         );  
     }
 }

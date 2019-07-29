@@ -19,6 +19,7 @@
 
     @include desk {
         padding: 0 180px;
+        justify-content: space-between;
     }
 
     &__logo {
@@ -34,7 +35,7 @@
 
         @include desk {
             height: 30px;
-            margin-right: 250px;
+            margin-right: 345px;
         }
     }
 
@@ -50,16 +51,21 @@
         border: solid 1px $mercury;
         background-color: $alabaster;
 
+        @include tablet {
+            width: 170px;
+        }
+
         &:active {
             border-color: $brainflix-blue;
         }
 
-        @include tablet {
-            width: 150px;
+        &:hover {
+            border-color: $brainflix-blue;
         }
 
-        @include tablet {
-            width: 250px;
+
+        @include desk {
+            width: 260px;
             height: 45px;
             
         }
@@ -73,6 +79,11 @@
         @include tablet {
             width: 25%;
             margin: 0;
+        }
+
+        @include desk {
+            width: 20%;
+            justify-content: flex-end;
         }
 
         &__button {
@@ -100,6 +111,7 @@
 
             @include desk {
                 height: 49px;
+                width: 60%;
             }
         }
     

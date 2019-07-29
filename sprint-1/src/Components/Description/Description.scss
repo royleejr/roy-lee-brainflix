@@ -13,6 +13,11 @@
         margin-bottom: 64px;
     }
 
+    @include desk {
+        padding: 0 0 0 180px;
+        margin-bottom: 20px;
+    }
+
     &__title {
 
         @include h1-mobile-font;
@@ -69,6 +74,10 @@
         display:flex;
         padding-bottom:24px;
 
+        @include desk {
+            margin-right: 32px;
+        }
+
         &__views-img {
             height: 15px;
             margin-right: 8px;
@@ -77,6 +86,10 @@
         &__views {
             @include h4-mobile-font;
             margin: 0;
+
+            @include desk {
+                @include h4-desk-font;
+            }
         }
 
         &__likes-img {
@@ -87,6 +100,10 @@
         &__likes {
             @include h4-mobile-font;
             margin:0;
+
+            @include desk {
+                @include h4-desk-font;
+            }
         }
     }
 
@@ -95,6 +112,10 @@
 
         @include tablet {
             @include h4-desk-font;
+        }
+
+        @include desk {
+            width: 70%;
         }
     }
 }

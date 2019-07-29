@@ -11,6 +11,10 @@
         padding: 0 24px;
     }
 
+    @include desk {
+        padding: 0 0 0 180px;
+    }
+
     &__counter {
         @include h4-mobile-font;
         font-family: 'AvenirDemiBold';
@@ -68,7 +72,16 @@
         height: 12px;
     }
 
+    @include desk {
+        padding: 10px;
+        height: 20px;
+    }
+
     &:active {
+        border-color: $brainflix-blue;
+    }
+
+    &:hover {
         border-color: $brainflix-blue;
     }
 
@@ -86,6 +99,10 @@
     border: 1px solid $brainflix-blue;
     font-family: 'AvenirRegular';
     margin: 0 0 24px 0;
+
+    &:active {
+        background-color: $brainflix-blue-hover;
+    }
 
     @include tablet {
         width: 30%;
