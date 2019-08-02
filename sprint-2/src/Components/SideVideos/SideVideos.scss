@@ -1,0 +1,74 @@
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+@import "../../Styles/fonts.scss";
+
+.side-videos {
+    padding: 0 16px;
+
+    @include tablet {
+        padding: 0 24px;
+    }
+
+    @include desk {
+        width: 30%;
+        display: inline-block;
+        padding: 0 180px 0 0;
+    }
+
+    &__title{
+        @include h5-desk-font;
+        color: $Silver;
+        font-family: 'AvenirDemiBold';
+        margin: 40px 0;
+
+        @include desk {
+            margin: 20px 0 40px 0;
+        }
+    }
+
+    &__video-container {
+        display: flex;
+        margin-bottom: 24px;
+        text-decoration: none;
+        color: $background-black;
+
+        @include tablet {
+            width: 46%;
+        }
+
+        @include desk {
+            width: 100%;
+        }
+
+        &__video {  
+            width: 120px;
+            height:70px;
+            object-fit: cover;
+        }
+
+        &__info-div {
+            width: 50%;
+            margin-left: 10px;
+        }
+    }
+}
+
+.video-container__info-div__title {
+    @include h4-mobile-font;
+    font-family: 'AvenirDemiBold';
+    margin: 0;
+
+    @include tablet {
+        @include h4-desk-font;
+    }
+
+}
+
+.video-container__info-div__channel {
+    @include h4-mobile-font;
+    margin: 5px 0 0 0;
+
+    @include tablet {
+        @include h4-desk-font;
+    }
+}

@@ -1,0 +1,77 @@
+@mixin h1-mobile-font {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+@mixin h2-mobile-font {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@mixin h4-mobile-font {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+@mixin h5-mobile-font {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+@mixin hero-h1-desk-font {
+    font-size: 60px;
+    line-height: 68px;
+}
+
+@mixin h1-desk-font {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+@mixin h2-desk-font {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+@mixin h3-desk-font {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin h4-desk-font {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@mixin lists-h4-desk-font {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin h5-desk-font {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+
+@mixin mobile {
+    @media (min-width:320px) {
+
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:768px) {
+
+        @content;
+    }
+}
+
+@mixin desk {
+    @media (min-width: 1440px) {
+
+        @content;
+    }
+}
+

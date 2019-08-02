@@ -1,0 +1,121 @@
+@import "../../Styles/fonts.scss";
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+.description {
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 0 16px;
+
+    @include tablet {
+        padding: 0 24px;
+        margin-bottom: 64px;
+    }
+
+    @include desk {
+        padding: 0 0 0 180px;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+
+        @include h1-mobile-font;
+        font-family: 'AvenirBold';
+        margin: 0px 0 16px 0;
+
+        @include tablet {
+            @include h1-desk-font;
+        }
+    }
+
+    &__container-flex{
+        border-bottom: 1px solid $mercury;
+
+        @include tablet {
+            display:flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__container1 {
+        display:flex;
+        margin-bottom: 32px;
+
+        @include tablet {
+            flex-direction: row;
+        }
+        
+
+        &__channel {
+            @include h2-mobile-font;
+            font-family: 'AvenirDemiBold';
+            margin:0 8px 0 0;
+
+            @include tablet {
+                @include h3-desk-font;
+            }
+
+        }
+
+        &__date{
+            margin: 0;
+            @include h5-mobile-font;
+            color: $Silver;
+
+            @include tablet {
+                @include h5-desk-font;
+                align-self: center;
+            }
+        }
+    }
+
+    &__container2 {
+        display:flex;
+        padding-bottom:24px;
+
+        @include desk {
+            margin-right: 32px;
+        }
+
+        &__views-img {
+            height: 15px;
+            margin-right: 8px;
+        }
+
+        &__views {
+            @include h4-mobile-font;
+            margin: 0;
+
+            @include desk {
+                @include h4-desk-font;
+            }
+        }
+
+        &__likes-img {
+            height: 15px;
+            margin:0 8px 0 24px;
+        }
+
+        &__likes {
+            @include h4-mobile-font;
+            margin:0;
+
+            @include desk {
+                @include h4-desk-font;
+            }
+        }
+    }
+
+    &__info {
+        @include h5-mobile-font;
+
+        @include tablet {
+            @include h4-desk-font;
+        }
+
+        @include desk {
+            width: 70%;
+        }
+    }
+}

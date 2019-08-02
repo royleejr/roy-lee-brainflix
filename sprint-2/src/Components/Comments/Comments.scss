@@ -1,0 +1,73 @@
+@import "../../Styles/fonts.scss";
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+.comments {
+    margin: 0 16px;
+    display:flex;
+    padding: 20px 0 0 0;
+    border-bottom: 1px solid $mercury;
+
+    @include tablet {
+        margin: 0 24px;
+    }
+
+    @include desk {
+        margin: 0 0 0 180px;
+        width: 62%;
+    }
+
+    &__img {
+        height: 40px;
+        width: 40px;
+        border-radius:50%;
+        background-color: $Silver;
+        margin: 15px 15px 0 0;
+    }
+
+    &__container {
+        width: 70%;
+
+        @include tablet {
+            width: 85%;
+        }
+
+        &__info {
+            display:flex;
+            justify-content: space-between;
+
+            @include tablet {
+                justify-content: flex-start;
+            }
+        }
+
+        &__comment{
+            @include h4-mobile-font;
+
+            @include tablet {
+                @include h4-desk-font;
+            }
+        }
+    }
+}
+
+.container__info__name {
+    @include h4-mobile-font;
+    font-family: 'AvenirDemiBold';
+    margin: 0 10px 0 0;
+
+    @include tablet {
+        @include h4-desk-font;
+    }
+}
+
+.container__info__date {
+    @include h5-mobile-font;
+    color: $Silver;
+    margin: 0;
+
+    @include tablet {
+        @include h5-desk-font;
+    }
+}
+
