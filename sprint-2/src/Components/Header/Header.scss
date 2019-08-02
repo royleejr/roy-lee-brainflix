@@ -23,14 +23,17 @@
     }
 
     &__logo {
+        display:flex;
         height: 48px;
         width: 50%;
         align-self: center;
+        justify-content: center;
 
         @include tablet {
             height: 25px;
             width: 20%;
             margin-right: 150px;
+            justify-content: flex-start;
         }
 
         @include desk {
@@ -38,6 +41,7 @@
             margin-right: 345px;
         }
     }
+
 
     &__input {
         background-image: url("../../assets/Icons/SVG/Icon-search.svg");

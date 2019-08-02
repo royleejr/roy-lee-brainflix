@@ -11,25 +11,24 @@ class SideVideos extends React.Component {
 
     componentDidMount () {
         this.getSideVideoData()
-        
     }
 
     getSideVideoData = () => {
         Axios.get('https://project-2-api.herokuapp.com/videos?api_key=roy')
         .then (response => {
-            const sideVideoData = response.data.filter((item) => item.id !== this.props.mainVideoData.id);
             this.setState({
-                sideVideoData: sideVideoData
+                sideVideoData: response.data
             })
         })
     }
 
     render () {
+        const newSideVideoData = this.state.sideVideoData.filter((item) => item.id !== this.props.mainVideoData.id);
         return(
             <aside className="side-videos">
                 <p className="side-videos__title">NEXT VIDEO</p>
                 {
-                    this.state.sideVideoData.map ( (item) => {
+                    newSideVideoData.map ( (item) => {
                     return (
                     <Link to={`/videos/${item.id}`} className="side-videos__video-container" key={item.id}>
                         <video className="side-videos__video-container__video" poster={item.image}></video>

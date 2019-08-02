@@ -1,0 +1,30 @@
+@import "../../Styles/fonts.scss";
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+.hero {
+    @include tablet {
+        border-top: 1px solid $mercury;
+        padding-top: 40px;
+    }
+
+    &__title {
+        @include h5-mobile-font;
+        font-family: 'AvenirDemiBold';
+        color: $Silver;
+
+        @include tablet {
+            @include h5-desk-font;
+            margin: 0;
+        }
+    }
+
+    &__video {
+        width: 288px;
+        border-radius: 4px;
+
+        @include tablet {
+            width: 344px;
+        }
+    }
+}

@@ -33,7 +33,7 @@ class Main extends React.Component {
     }
     
     componentDidUpdate = () => {
-        if (this.state.mainVideoData.id !== this.props.match.params.id) {
+        if (this.state.mainVideoData.id !== this.props.match.params.id && this.state.mainVideoData.length > 0) {
             this.getMainVideoData(this.props.match.params.id);
         }
     }
