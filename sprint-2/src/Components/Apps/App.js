@@ -16,8 +16,6 @@ class App extends React.Component {
           <Route path="/videos/:id" component={Main} />
         </Switch>
       </BrowserRouter>
-        // <Main />
-        // <UploadPage />
     );
   }
 }

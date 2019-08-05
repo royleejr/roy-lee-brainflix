@@ -4,7 +4,6 @@
 
 .main-video {
 
-
     &--background-black {
 
         @include tablet {
@@ -31,6 +30,7 @@
         @include desk {
             margin: 0;
             width: 100%;
+            height: 540px;
         }
     }
     

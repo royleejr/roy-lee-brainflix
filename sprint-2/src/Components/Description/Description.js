@@ -6,6 +6,15 @@ import LikesImg from '../../assets/Icons/SVG/Icon-likes.svg';
 
 class Description extends React.Component {
 
+    changeDate = () => {
+        let date = new Date(this.props.mainVideoData.timestamp);
+        let newMonth = date.getMonth();
+        let newDay = date.getDate();
+        let newYear = date.getFullYear();
+        let newDate = (newMonth + 1)+'/' + newDay +'/'+ newYear;
+        return newDate;
+    }
+
     render () {
 
         const {title, channel, timestamp, views, likes, description} = this.props.mainVideoData;
@@ -16,7 +25,7 @@ class Description extends React.Component {
                 <div className="description__container-flex">
                     <div className="description__container1">
                         <p className="description__container1__channel">By {channel}</p>
-                        <p className="description__container1__date">{timestamp}</p>
+                        <p className="description__container1__date">{this.changeDate()}</p>
                     </div>
                     <div className="description__container2">
                         <img className="description__container2__views-img" src={ViewsImg} alt=""></img>

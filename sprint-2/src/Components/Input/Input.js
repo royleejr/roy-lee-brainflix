@@ -15,7 +15,7 @@ class Input extends React.Component {
                     <p className="input__title">JOIN THE CONVERSATION</p>
                     <div className="input__section">
                         <img className="input__section__image" src={Img} alt=""></img>
-                        <form className="input__section__form"method="POST" name="commentForm" onSubmit={this.addComment}>
+                        <form className="input__section__form" name="commentForm" onSubmit={this.props.addComment}>
                             <textarea className="section__form__comment-box" placeholder="Add a comment" name="comment"></textarea>
                             <button type="submit" className="section__form__button">COMMENT</button>
                         </form>

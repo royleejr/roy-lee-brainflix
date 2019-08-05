@@ -7,8 +7,16 @@ import SoundButton from '../../assets/Icons/SVG/Icon-volume.svg';
 
 class MainVideo extends React.Component {
 
-    render() {
+    // changeDate = () => {
+    //     let date = new Date(array[i].timestamp);
+    //     let newMonth = date.getMonth();
+    //     let newDay = date.getDate();
+    //     let newYear = date.getFullYear();
+    //     let newDate = ('0' + (newMonth + 1))+'/' + newDay +'/'+ newYear;
+    // }
 
+    render() {
+        console.log(this.props)
         return (
             <section className="main-video">
                 <div className="main-video--background-black">

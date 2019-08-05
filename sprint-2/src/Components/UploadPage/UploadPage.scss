@@ -2,36 +2,29 @@
 @import "../../Styles/mixins.scss";
 @import "../../Styles/variables.scss";
 
-.main {
+.upload-main {
     font-family:'AvenirRegular';
     color: $background-black;
+    padding: 0 16px;
+    border-top: 1px solid $mercury;
+
+    @include tablet {
+        padding: 0 24px;
+    }
+
+    @include desk {
+        padding: 0 180px;
+    }
 
     &__header {
         @include h1-mobile-font;
         font-family: 'AvenirBold';
         margin-top: 24px;
-        padding: 0 16px;
 
         @include tablet {
             @include h1-desk-font;
-            margin-bottom: 40px;
-            padding: 0 24px 0 24px;
-        }
-
-        @include desk {
-            padding: 0 180px;
-        }
-    }
-
-    &--flex {
-        padding: 0 16px;
-
-        @include tablet {
-            padding: 0 24px;
-        }
-        @include desk {
-            padding: 0 180px;
-            display: flex;
+            margin-bottom: 32px;
+            margin-top: 48px;
         }
     }
 }

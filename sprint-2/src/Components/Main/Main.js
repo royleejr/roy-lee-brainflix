@@ -28,14 +28,40 @@ class Main extends React.Component {
             this.setState({
                 mainVideoData: response.data,
                 CommentData: response.data.comments
-            })
+            })  
+        })
+        .catch (error => {
+            console.log('this is the problem')
         })
     }
     
     componentDidUpdate = () => {
-        if (this.state.mainVideoData.id !== this.props.match.params.id && this.state.mainVideoData.length > 0) {
-            this.getMainVideoData(this.props.match.params.id);
+        if (this.state.mainVideoData.id !== this.props.match.params.id && this.props.match.params.id) {
+                this.getMainVideoData(this.props.match.params.id);
         }
+    }
+
+    addComment = (event) => {
+        event.preventDefault();
+        console.log(this.state)
+        console.log(this.props.match.params.id)
+        let id = this.state.mainVideoData.id;
+        let comment = {
+            "name": "Nigel",
+            "comment": `${event.target.comment.value}`
+        }
+        this.postComment(id, comment)
+        
+    }
+
+    postComment = (id, comment) => {
+        Axios.post(`https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=roy`, comment)
+        .then (result => {
+            this.getMainVideoData(id)
+        })
+        .catch (error => {
+            console.log(error)
+        })
     }
 
     render() {
@@ -46,7 +72,7 @@ class Main extends React.Component {
                 <div className="main__layout">
                     <div className="main__layout__container">
                         <Description mainVideoData={this.state.mainVideoData}/>
-                        <Input CommentData={this.state.CommentData}/>
+                        <Input CommentData={this.state.CommentData} addComment={this.addComment}/>
                         <Comments CommentData={this.state.CommentData}/>
                     </div>
                     <SideVideos match={this.props.match} mainVideoData={this.state.mainVideoData}/>
