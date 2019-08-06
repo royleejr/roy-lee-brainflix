@@ -1,0 +1,126 @@
+@import "../../Styles/fonts.scss";
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+.main-video {
+
+    &--background-black {
+
+        @include tablet {
+            background-color: black;
+            display:flex;
+            justify-content: center;
+        }
+
+        @include desk {
+            padding: 0 248px;
+        }
+    }
+    &__video {
+        width:100%;
+        margin:0;
+
+        @include tablet {
+            width: 94%;
+            margin: 0 24px;
+            display: flex;
+            background-color:black;
+        }
+
+        @include desk {
+            margin: 0;
+            width: 100%;
+            height: 540px;
+        }
+    }
+    
+    &__controls {
+        display:flex;
+        position: relative;
+        bottom: 50px;
+        left: 2px;
+        width: 100%;
+        justify-content: center;
+
+        @include desk {
+            width: 70%;
+            justify-self: center;
+            left: 210px;
+        }
+
+        &__play-button {
+            background-color: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        &__duration {
+            width:60%;
+            background-color: black;
+            margin: 0 5px 0 5px;
+            height: 40px;
+            border-radius: 4px;
+            display:flex;
+            opacity: 0.5;
+            justify-content: center;
+
+            @include tablet {
+                width: 70%;
+                margin: 0 16px 0 16px;
+            }
+        }
+        &__btn-container {
+            height: 40px;
+            width: 40px;
+            background-color: rgba(0,0,0,0.5);
+            display: flex;
+            padding: 0 10px 0 10px;
+            border-radius: 4px;
+            
+            @include tablet {
+                width: 62px;
+            }
+
+        }
+    }
+}
+
+.controls__duration--bar {
+    height: 5px;
+    width: 80%;
+    background-color: $Silver;
+    border-radius: 4px;
+    align-self: center;
+}
+
+.controls__duration--time {
+    display:none; 
+    color: $text-white;
+
+    @include tablet {
+        display: flex;
+        align-self: center;
+        margin: 3px 0 0 15px;
+        @include h5-mobile-font;
+
+    }
+}
+
+.controls__btn-container__fullscreen {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin-right: 10px;
+
+    @include tablet {
+        margin-right: 15px;
+    }
+}
+
+.controls__btn-container__sound {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}

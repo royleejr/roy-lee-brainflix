@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "API for brainflix sprint-3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roy",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}

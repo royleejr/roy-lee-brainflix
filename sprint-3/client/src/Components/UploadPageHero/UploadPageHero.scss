@@ -1,0 +1,168 @@
+@import "../../Styles/fonts.scss";
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+
+.upload {
+
+}
+.border {
+    
+
+    @include desk {
+        display:flex;
+        border-top: 1px solid $mercury;
+        border-bottom: 1px solid $mercury;
+    }
+}
+
+.hero {
+    @include tablet {
+        border-top: 1px solid $mercury;
+        padding-top: 40px;
+    }
+
+    &__title {
+        @include h5-mobile-font;
+        font-family: 'AvenirDemiBold';
+        color: $Silver;
+
+        @include tablet {
+            @include h5-desk-font;
+            margin: 0;
+        }
+    }
+
+    &__video {
+        width: 288px;
+        border-radius: 4px;
+
+        @include tablet {
+            width: 344px;
+        }
+    }
+}
+
+.upload-input {
+
+    @include desk {
+        width: 70%;
+        margin-left: 24px;
+    }
+
+    &__title {
+        @include h5-mobile-font;
+        color: $Silver;
+        font-family: 'AvenirDemiBold';
+        margin: 24px 0 0 0;
+
+        @include tablet {
+            @include h5-desk-font;
+            margin: 40px 0 0 0;
+        }
+        @include desk {
+            margin: 36px 0 0 0;
+        }
+    }
+
+    &__border {
+        border-bottom: 1px solid $mercury;
+
+        @include desk {
+            border: none;
+        }
+    }
+
+    &__input1 {
+        width: 100%;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        height: 40px;
+        padding-left: 15px;
+        box-sizing: border-box;
+
+        &::placeholder {
+            font-family: 'AvenirRegular';
+            color: $background-black;
+        }
+    }
+
+    &__input2 {
+        width: 100%;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        height: 143px;
+        padding: 10px 5px 0 15px;
+        box-sizing: border-box;
+        margin-bottom: 32px;
+
+        @include tablet {
+            margin-bottom: 40px;
+        }
+
+        @include desk {
+            height: 94px;
+        }
+        
+        &::placeholder {
+            font-family: 'AvenirRegular';
+            color: $background-black;
+        }
+        
+    }
+
+    &__buttons {
+
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__cancel-button1 {
+            display:none;
+            background-color: $text-white;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid $text-white;
+            color: $brainflix-blue;
+            margin-bottom: 10px;
+
+            @include tablet {
+                display: flex;
+                width: 160px;
+                margin-top: 40px;
+                justify-content: center;
+            }
+        }
+
+        &__publish-button {
+            background-color: $brainflix-blue;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid $brainflix-blue;
+            color: $text-white;
+    
+            @include tablet {
+                margin-top: 40px;
+                width: 160px;
+            }
+        }
+    
+        &__cancel-button2 {
+            background-color: $text-white;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid $text-white;
+            color: $brainflix-blue;
+            margin-bottom: 10px;
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+    
+}

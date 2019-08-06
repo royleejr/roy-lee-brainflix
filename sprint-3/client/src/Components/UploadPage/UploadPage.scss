@@ -1,0 +1,31 @@
+@import "../../Styles/fonts.scss";
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+
+.upload-main {
+    font-family:'AvenirRegular';
+    color: $background-black;
+    padding: 0 16px;
+    border-top: 1px solid $mercury;
+
+    @include tablet {
+        padding: 0 24px;
+    }
+
+    @include desk {
+        padding: 0 180px;
+    }
+
+    &__header {
+        @include h1-mobile-font;
+        font-family: 'AvenirBold';
+        margin-top: 24px;
+
+        @include tablet {
+            @include h1-desk-font;
+            margin-bottom: 32px;
+            margin-top: 48px;
+        }
+    }
+}
+

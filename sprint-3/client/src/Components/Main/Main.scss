@@ -1,0 +1,28 @@
+@import "../../Styles/mixins.scss";
+@import "../../Styles/variables.scss";
+@import "../../Styles/fonts.scss";
+
+
+.main {
+    color: $background-black;
+    font-family: 'AvenirRegular';
+    
+    @include tablet {
+        padding: 0;
+    }
+
+    &__layout {
+
+        @include desk {
+            display: flex;
+        }
+
+        &__container {
+
+            @include desk {
+            margin: 0 24px 0 0;
+            width: 80%;
+            }
+        }
+    }
+}
