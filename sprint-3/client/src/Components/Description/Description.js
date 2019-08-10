@@ -17,7 +17,7 @@ class Description extends React.Component {
 
     render () {
 
-        const {title, channel, timestamp, views, likes, description} = this.props.mainVideoData;
+        const {title, channel, views, likes, description} = this.props.mainVideoData;
 
         return (
             <section className="description">
