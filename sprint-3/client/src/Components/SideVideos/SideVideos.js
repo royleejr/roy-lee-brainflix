@@ -14,7 +14,7 @@ class SideVideos extends React.Component {
     }
 
     getSideVideoData = () => {
-        Axios.get('https://project-2-api.herokuapp.com/videos?api_key=roy')
+        Axios.get('http://localhost:8080/videos')
         .then (response => {
             this.setState({
                 sideVideoData: response.data

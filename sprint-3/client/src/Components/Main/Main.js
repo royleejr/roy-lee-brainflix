@@ -23,7 +23,7 @@ class Main extends React.Component {
     }
 
     getMainVideoData = (id) => {
-        Axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=roy`)
+        Axios.get(`http://localhost:8080/videos/${id}`)
         .then (response => {
             this.setState({
                 mainVideoData: response.data,
@@ -43,19 +43,20 @@ class Main extends React.Component {
 
     addComment = (event) => {
         event.preventDefault();
-        console.log(this.state)
-        console.log(this.props.match.params.id)
         let id = this.state.mainVideoData.id;
+        let date = new Date ();
+        let timestamp = date.getTime(); 
         let comment = {
             "name": "Nigel",
-            "comment": `${event.target.comment.value}`
+            "comment": `${event.target.comment.value}`,
+            "timestamp": timestamp
         }
         this.postComment(id, comment)
         
     }
 
     postComment = (id, comment) => {
-        Axios.post(`https://project-2-api.herokuapp.com/videos/${id}/comments?api_key=roy`, comment)
+        Axios.post(`http://localhost:8080/videos/${id}/comments`, comment)
         .then (result => {
             this.getMainVideoData(id)
         })

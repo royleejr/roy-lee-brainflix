@@ -10,6 +10,6 @@ app.use(express.json());
 
 app.use('/videos', videosRoute)
 
-app.listen(5000, () => {
+app.listen(8080, () => {
     console.log('the server is running!')
 })
